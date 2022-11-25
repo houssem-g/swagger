@@ -1,0 +1,69 @@
+{
+  "name": "swagger-ui-kong-theme",
+  "version": "1.1.6",
+  "description": "Plugin to theme Swagger-UI with 3 columns",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "copy-styles": "cp src/styles.css ../kong-portal-templates/workspaces/default/themes/base/assets/styles/swagger-ui-kong-theme.$(git rev-parse --short HEAD).css",
+    "dev": "DEBUG=true webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kong/kong-portal-cli.git"
+  },
+  "author": "Henri Pietila @henripro",
+  "license": "Apache-2.0",
+  "keywords": [
+    "swagger-ui",
+    "theme",
+    "plugin",
+    "three",
+    "column",
+    "three-column"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  },
+  "dependencies": {
+    "@braintree/sanitize-url": "^2.0.2",
+    "@kyleshockey/xml": "^1.0.2",
+    "curl-to-har": "^1.0.1",
+    "focus-trap-react": "^10.0.0",
+    "immutable": "^3.x.x",
+    "js-file-download": "^0.4.1",
+    "memoizee": "^0.4.12",
+    "react-apiembed": "0.1.8",
+    "react-debounce-input": "^3.2.0",
+    "swagger2har": "git+https://github.com/Kong/swagger2har.git#8409def1fd72311f44b1d34e669af76226cb4f59"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "^7.0.0",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "file-loader": "^4.0.0",
+    "react": "15.6.2",
+    "react-immutable-proptypes": "2.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "url-loader": "^2.3.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "resolutions": {
+    "react": "15.6.2",
+    "react-dom": "15.6.2"
+  }
+}
